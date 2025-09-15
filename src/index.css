@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
+.navbar-brand { font-weight: 700; }
+.card-hover:hover { box-shadow: 0 6px 18px rgba(10, 183, 231, 0.975); transform: translateY(-4px); transition: .2s; }
+.toast-fixed { position: fixed; top: 1rem; right: 1rem; z-index: 9999; }
+.loading-center { display:flex; align-items:center; justify-content:center; height:100vh; flex-direction:column; color:#333; }
