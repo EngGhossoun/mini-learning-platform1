@@ -19,7 +19,7 @@ export default function Loading(){
   return (
     <div className="loading-center">
       <div ref={container} style={{width:320, height:320}}></div>
-      <h4 className="mt-3">Loading your learning experience...</h4>
+      <h4 className="mt-3">Loading The learning platform...</h4>
     </div>
   );
 }

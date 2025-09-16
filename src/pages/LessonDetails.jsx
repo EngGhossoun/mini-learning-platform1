@@ -28,7 +28,7 @@ export default function LessonDetails() {
       {!completed ? (
         <button className="btn btn-success" onClick={handleComplete}>Mark as Complete</button>
       ) : (
-        <div className="alert alert-success">✅ Lesson Completed</div>
+        <div className="alert alert-success">The Lesson Completed✅</div>
       )}
 
       {showToast && <div className="toast-fixed"><div className="toast show align-items-center text-white bg-success border-0"><div className="d-flex"><div className="toast-body">🎉 أحسنت! أنهيت الدرس</div><button type="button" className="btn-close btn-close-white me-2 m-auto" onClick={() => setShowToast(false)}></button></div></div></div>}
