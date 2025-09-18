@@ -10,7 +10,7 @@ export default function Navbar() {
   }, [dark]);
 
   return (
-    <nav className={`navbar navbar-expand-lg ${dark ? 'navbar-dark bg-dark' : 'navbar-light bg-white'} shadow-sm`}>
+    <nav className={`navbar navbar-expand-lg ${dark ? 'navbar-dark bg-dark' : 'navbar-light bg-gray'} shadow-sm`}>
       <div className="container">
         <Link className="navbar-brand" to="/">📚 Mini Learning</Link>
         <div className="d-flex align-items-center">

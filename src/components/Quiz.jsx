@@ -29,7 +29,7 @@ export default function Quiz({questions, onFinish}){
           ))}
         </div>
       ))}
-      <button className="btn btn-primary" onClick={handleSubmit}>Submit</button>
+      <button className="btn btn-dark" onClick={handleSubmit}>Submit</button>
       {result !== null && <div className="alert alert-info mt-3">Score: {result}%</div>}
     </div>
   );
