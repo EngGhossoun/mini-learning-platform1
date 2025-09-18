@@ -25,7 +25,12 @@ body {
   align-items: center;       /* يخلي المحتوى بالنص عمودياً */
   height: 100vh;             /* يغطي الشاشة */
   width: 100vw;
-  background-color: #fff;    /* خلفية بيضاء */
+   margin: 0;
+  padding: 0;
+  background-image: url('/public/myphoto-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   position: fixed;
   top: 0;
   left: 0;
