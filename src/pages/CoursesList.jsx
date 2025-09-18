@@ -7,13 +7,10 @@ export default function CoursesList() {
       <h1 className="mb-4">Available Courses</h1>
       <div className="row">
         {courses.map((course) => (
-<<<<<<< Updated upstream
-          <div key={course.id} className="col-md-6 mb-3">
-            <div className="card p-3 card-hover h-100" style={{ backgroundColor: '#6b6a68dd', color: 'white' }}>
-=======
+
           <div key={course.id} className="col-md-6 mb-3" >
-            <div className="card p-3 card-hover h-100" style={{ backgroundColor: '#798f9866', color: 'white' }}>
->>>>>>> Stashed changes
+            <div className="card p-3 card-hover h-100" style={{ backgroundColor: '#798f9881', color: 'white' }}>
+
               <h5>{course.title} <small className="text-muted">({course.level})</small></h5>
               <p className="text-muted">{course.description}</p>
               <div className="mb-2">
