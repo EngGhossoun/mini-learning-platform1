@@ -1,5 +1,6 @@
-body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
+body { font-family: Arial, sans-serif; background-color: #0f87e3c7;  }
 .navbar-brand { font-weight: 700; }
+<<<<<<< Updated upstream
 .card-hover:hover { box-shadow: 0 6px 18px rgb(124, 99, 79); transform: translateY(-4px); transition: .2s; }
 .toast-fixed { position: fixed; top: 1rem; right: 1rem; z-index: 9999; }
 .loading-center { display:flex; align-items:center; justify-content:center; height:100vh; flex-direction:column; color:#333; }
@@ -51,4 +52,14 @@ body {
   to {
     transform: translateX(20px);
   }
+=======
+.card-hover:hover { box-shadow: 0 6px 18px rgba(10, 143, 231, 0.82); transform: translateY(-4px); transition: .2s; }
+.toast-fixed { position: fixed; top: 1rem; right: 1rem; z-index: 9999; }
+.loading-center { display:flex; align-items:center; justify-content:center; height:100vh; flex-direction:column; color:#000000; }
+.card {
+  background-color: #878e93c3; 
+}
+.navbar {
+  background-color: #020106ab; 
+>>>>>>> Stashed changes
 }

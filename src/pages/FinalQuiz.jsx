@@ -28,7 +28,7 @@ export default function FinalQuizPage(){
       <h3>Final Quiz - {course.title}</h3>
       <Quiz questions={course.finalQuiz} onFinish={handleFinish} />
       <div className="mt-3">
-        <button className="btn btn-secondary me-2" onClick={() => navigate(-1)}>Back</button>
+        <button className="btn btn-info me-2" onClick={() => navigate(-1)}>Back</button>
       </div>
     </div>
   );
