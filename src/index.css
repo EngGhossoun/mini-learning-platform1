@@ -3,3 +3,43 @@ body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
 .card-hover:hover { box-shadow: 0 6px 18px rgba(10, 183, 231, 0.975); transform: translateY(-4px); transition: .2s; }
 .toast-fixed { position: fixed; top: 1rem; right: 1rem; z-index: 9999; }
 .loading-center { display:flex; align-items:center; justify-content:center; height:100vh; flex-direction:column; color:#333; }
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/public/myphoto-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.loading-center {
+  display: flex;
+  justify-content: center;   /* يخلي المحتوى بالنص أفقياً */
+  align-items: center;       /* يخلي المحتوى بالنص عمودياً */
+  height: 100vh;             /* يغطي الشاشة */
+  width: 100vw;
+  background-color: #fff;    /* خلفية بيضاء */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* حركة النص */
+.loading-text {
+  font-size: 20px;
+  font-weight: bold;
+  animation: moveText 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(-20px);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
