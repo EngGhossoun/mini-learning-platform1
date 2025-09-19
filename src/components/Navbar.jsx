@@ -17,7 +17,7 @@ export default function Navbar() {
         <Link className="navbar-brand" to="/">📚 Mini Learning</Link>
         <div className="d-flex align-items-center">
           <Link to="/leaderboard" className="bg-white/10 backdrop-blur-lg rounded-lg p-3 text-white ">Leaderboard</Link>
-          <button className="btn btn-outline-dark me-2" onClick={() => setDark(!dark)}>{dark ? 'Light' : 'Dark'}</button>
+          <button className="btn btn-outline-light me-2" onClick={() => setDark(!dark)}>{dark ? 'Light' : 'Dark'}</button>
         </div>
       </div>
     </nav>
