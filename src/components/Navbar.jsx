@@ -11,13 +11,13 @@ export default function Navbar() {
 
   return (
 
-    <nav className={`navbar navbar-expand-lg ${dark ? 'navbar-dark bg-dark' : 'navbar-light bg-blue'} shadow-sm`}>
+    <nav className={`navbar navbar-expand-lg ${dark ? 'navbar-dark bg-dark' : 'navbar-light bg-blue'} shadow-md`}>
 
       <div className="container">
         <Link className="navbar-brand" to="/">📚 Mini Learning</Link>
         <div className="d-flex align-items-center">
-          <Link to="/leaderboard" className="btn btn-link me-2">Leaderboard</Link>
-          <button className="btn btn-outline-secondary me-2" onClick={() => setDark(!dark)}>{dark ? 'Light' : 'Dark'}</button>
+          <Link to="/leaderboard" className="bg-white/10 backdrop-blur-lg rounded-lg p-3 text-white ">Leaderboard</Link>
+          <button className="btn btn-outline-dark me-2" onClick={() => setDark(!dark)}>{dark ? 'Light' : 'Dark'}</button>
         </div>
       </div>
     </nav>

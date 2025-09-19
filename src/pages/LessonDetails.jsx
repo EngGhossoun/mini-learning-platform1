@@ -19,22 +19,62 @@ export default function LessonDetails() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: 'rgba(154, 175, 181, 0.45)', 
+        padding: '1rem',
+        borderRadius: '0.5rem',
+        backdropFilter: 'blur(5px)', 
+      }}
+    >
       <h3>{lesson.title}</h3>
-      {lesson.image && <img src={lesson.image} alt={lesson.title} className="img-fluid mb-3 rounded" />}
-      {lesson.video && <div className="ratio ratio-16x9 mb-3"><iframe src={lesson.video} title={lesson.title} allowFullScreen></iframe></div>}
+      {lesson.image && (
+        <img
+          src={lesson.image}
+          alt={lesson.title}
+          className="img-fluid mb-3 rounded"
+        />
+      )}
+      {lesson.video && (
+        <div className="ratio ratio-16x9 mb-3">
+          <iframe
+            src={lesson.video}
+            title={lesson.title}
+            allowFullScreen
+          ></iframe>
+        </div>
+      )}
       <p>{lesson.content}</p>
 
       {!completed ? (
-        <button className="btn btn-success" onClick={handleComplete}>Mark as Complete</button>
+        <button className="btn btn-success" onClick={handleComplete}>
+          Mark as Complete
+        </button>
       ) : (
         <div className="alert alert-success">The Lesson Completed✅</div>
       )}
 
-      {showToast && <div className="toast-fixed"><div className="toast show align-items-center text-white bg-success border-0"><div className="d-flex"><div className="toast-body">🎉 أحسنت! أنهيت الدرس</div><button type="button" className="btn-close btn-close-white me-2 m-auto" onClick={() => setShowToast(false)}></button></div></div></div>}
+      {showToast && (
+        <div className="toast-fixed">
+          <div className="toast show align-items-center text-white bg-success border-0">
+            <div className="d-flex">
+              <div className="toast-body">🎉 أحسنت! أنهيت الدرس</div>
+              <button
+                type="button"
+                className="btn-close btn-close-white me-2 m-auto"
+                onClick={() => setShowToast(false)}
+              ></button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <h4 className="mt-4">Mini Quiz</h4>
-      {lesson.quiz ? <Quiz questions={lesson.quiz} /> : <p className="text-muted">No quiz for this lesson.</p>}
+      {lesson.quiz ? (
+        <Quiz questions={lesson.quiz} />
+      ) : (
+        <p className="text-muted">No quiz for this lesson.</p>
+      )}
     </div>
   );
 }

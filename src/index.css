@@ -4,12 +4,14 @@ body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
 .toast-fixed { position: fixed; top: 1rem; right: 1rem; z-index: 9999; }
 .loading-center { display:flex; align-items:center; justify-content:center; height:100vh; flex-direction:column; color:#333; }
 .navbar {
-  background-color: #020106ab; 
+  background-color: #02010682; 
 }
 
 .card {
-  background-color: #878e93c3; 
+  background-color: #fefefe8e; 
 }
+
+
 body {
   margin: 0;
   padding: 0;
@@ -21,9 +23,9 @@ body {
 
 .loading-center {
   display: flex;
-  justify-content: center;   /* يخلي المحتوى بالنص أفقياً */
-  align-items: center;       /* يخلي المحتوى بالنص عمودياً */
-  height: 100vh;             /* يغطي الشاشة */
+  justify-content: center;   
+  align-items: center;      
+  height: 100vh;            
   width: 100vw;
    margin: 0;
   padding: 0;
@@ -37,7 +39,7 @@ body {
   z-index: 9999;
 }
 
-/* حركة النص */
+
 .loading-text {
   font-size: 20px;
   font-weight: bold;

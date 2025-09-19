@@ -6,15 +6,19 @@ import { useState } from "react";
 export default function CourseDetails() {
   const { id } = useParams();
   const course = courses.find((c) => c.id === parseInt(id));
+
+  if (!course) {
+    return <p className="text-danger">Course not found.</p>;
+  }
+
   const [localCourse, setLocalCourse] = useState(course);
+  const navigate = useNavigate();
 
   const completedLessons = localCourse.lessons.filter((l) => l.completed).length;
   const progress = Math.round((completedLessons / localCourse.lessons.length) * 100);
 
-  const navigate = useNavigate();
-
   return (
-    <div>
+    <div style={{ backgroundColor: "rgba(154, 175, 181, 0.45)", padding: "20px", borderRadius: "8px" }}>
       <h2>{localCourse.title}</h2>
       <p className="text-muted">{localCourse.description}</p>
       <ProgressBar progress={progress} />
@@ -26,7 +30,12 @@ export default function CourseDetails() {
             <span>{lesson.title}</span>
             <div>
               {lesson.completed && <span className="badge bg-success me-2">Completed</span>}
-              <Link to={`/courses/${localCourse.id}/lessons/${lesson.id}`} className="btn btn-sm btn-outline-primary">Open</Link>
+              <Link
+                to={`/courses/${localCourse.id}/lessons/${lesson.id}`}
+                className="btn btn-sm btn-outline-primary"
+              >
+                Open
+              </Link>
             </div>
           </li>
         ))}
@@ -34,7 +43,12 @@ export default function CourseDetails() {
 
       <div className="mt-3">
         {completedLessons === localCourse.lessons.length ? (
-          <Link className="btn btn-success" to={`/courses/${localCourse.id}/final`}>Take Final Quiz</Link>
+          <Link
+            to={`/courses/${localCourse.id}/final`}
+            className="btn btn-success"
+          >
+            Take Final Quiz
+          </Link>
         ) : (
           <p className="text-muted mt-2">Complete all lessons to unlock the final quiz.</p>
         )}
